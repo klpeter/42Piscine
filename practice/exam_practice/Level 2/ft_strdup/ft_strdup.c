@@ -1,52 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkovacs- <pkovacs-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/06 14:43:44 by pkovacs-          #+#    #+#             */
-/*   Updated: 2023/07/06 16:39:16 by pkovacs-         ###   ########.fr       */
+/*   Created: 2023/07/06 19:17:09 by pkovacs-          #+#    #+#             */
+/*   Updated: 2023/07/06 19:25:05 by pkovacs-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdlib.h>
 
-int	ft_atoi(char *c)
+int	ft_strlen(char *src)
 {
-	int	par;
-	int n;
 	int	i;
 
-	par = 0;
-	n = 0;
 	i = 0;
-	while(c[i])
-	{
-		if(c[i] == '-')
-		{
-		par++;
-		}
-		i++;
-	}
-	i = 0;
-	while((c[i]) && c[i] < '0')
+	while(src[i])
 	{
 		i++;
 	}
-	while(c[i] >= '0' && c[i] <= '9')
-	{
-		n *= 10;
-		n += c[i] - '0';
-		i++;
-	}
-	if (par % 2 == 0)
-		return(n);
-	return(-n);	
+	return (i);
 }
 
-int	main(void)
+char	ft_strcpy(char *str, char *src)
 {
-	char	*str = "\t\v\n--+---+1234abc567";
-	printf("%d", ft_atoi(str));
+	int i;
+
+	i = 0;
+	while(*src)
+	{
+		str[i] = src[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
+}
+
+int	main(char *src)
+{
+	char	*str;
+	
+	str = (char *)malloc(ft_strlen(src) + 1);
+	if (str)
+	{
+		ft_strcpy(str, src);
+	}
+	return (str);
 }
