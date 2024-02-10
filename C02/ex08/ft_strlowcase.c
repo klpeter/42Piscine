@@ -6,25 +6,25 @@
 /*   By: pkovacs- <pkovacs-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 14:19:06 by pkovacs-          #+#    #+#             */
-/*   Updated: 2023/06/25 14:21:09 by pkovacs-         ###   ########.fr       */
+/*   Updated: 2023/06/26 14:10:25 by pkovacs-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
+/*#include <stdio.h>*/
 
 char	*ft_strlowcase(char *str)
 {
-	char	*ptr;
+	int	i;
 
-	ptr = str;
-	while (*ptr != '\0')
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (*ptr >= 'A' && *ptr <= 'Z')
+		if (str[i] >= 'A' && str[i] <= 'Z')
 		{
-			*ptr = *ptr +32;
+			str[i] = str[i] +32;
 		}
-		ptr++;
+		i++;
 	}
 	return (str);
 }

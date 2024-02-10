@@ -6,25 +6,25 @@
 /*   By: pkovacs- <pkovacs-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 14:06:15 by pkovacs-          #+#    #+#             */
-/*   Updated: 2023/06/25 14:20:58 by pkovacs-         ###   ########.fr       */
+/*   Updated: 2023/06/26 14:07:21 by pkovacs-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
+/*#include <stdio.h>*/
 
 char	*ft_strupcase(char *str)
 {
-	char	*ptr;
+	int	i;
 
-	ptr = str;
-	while (*ptr != '\0')
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (*ptr >= 'a' && *ptr <= 'z')
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			*ptr = *ptr -32;
+			str[i] = str[i] -32;
 		}
-		ptr++;
+		i++;
 	}
 	return (str);
 }
@@ -35,5 +35,6 @@ int	main(void)
 
 	ft_strupcase(str);
 	printf("%s\n", str);
+	return (0);
 }
 */

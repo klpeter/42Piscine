@@ -6,14 +6,14 @@
 /*   By: pkovacs- <pkovacs-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 11:59:32 by pkovacs-          #+#    #+#             */
-/*   Updated: 2023/06/25 12:39:15 by pkovacs-         ###   ########.fr       */
+/*   Updated: 2023/06/25 22:23:42 by pkovacs-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-int	ft_str_alpha(char *str)
+int	ft_str_is_alpha(char *str)
 {
 	if (str == 0)
 	{

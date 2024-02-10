@@ -6,14 +6,14 @@
 /*   By: pkovacs- <pkovacs-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 13:45:30 by pkovacs-          #+#    #+#             */
-/*   Updated: 2023/06/25 13:48:51 by pkovacs-         ###   ########.fr       */
+/*   Updated: 2023/06/25 22:17:27 by pkovacs-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-int	ft_str_uppercase(char *str)
+int	ft_str_is_uppercase(char *str)
 {
 	if (str == 0)
 	{
@@ -33,7 +33,7 @@ int	ft_str_uppercase(char *str)
 int	main(void)
 {
 	char	c[] = "HELLO";
-	int	result = ft_str_uppercase(c);
+	int	result = ft_str_is_uppercase(c);
 	printf("Result: %d\n", result);
 	return (0);
 }

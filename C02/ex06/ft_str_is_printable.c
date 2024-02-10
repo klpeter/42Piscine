@@ -6,14 +6,14 @@
 /*   By: pkovacs- <pkovacs-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 13:49:22 by pkovacs-          #+#    #+#             */
-/*   Updated: 2023/06/25 14:05:07 by pkovacs-         ###   ########.fr       */
+/*   Updated: 2023/06/25 22:17:37 by pkovacs-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-int	ft_str_printable(char *str)
+int	ft_str_is_printable(char *str)
 {
 	if (str == 0)
 	{
